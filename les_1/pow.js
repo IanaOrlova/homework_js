@@ -1,4 +1,7 @@
+"use strict";
+
 alert("Я люблю БОРЩ");
+
 
 var name;
 var admin;
@@ -14,7 +17,11 @@ var username = "Петр";
 
 
 var userName = prompt("Как Ваше имя?");
- var planen = prompt("С какой Вы с планеты ?");
+var planet = prompt("С какой Вы с планеты ?");
 
 
-alert("Как насчет борща "+userName+" с планеты "+planen+ "?");
+alert("Как насчет борща "+userName+" с планеты "+planet+ "?");
+
+console.log(planet);
+console.log(userName);
+
