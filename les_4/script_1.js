@@ -15,12 +15,14 @@
 "use strict";
 
 var array = [1,2,3,4,5];
-var redoneArr =[];
+
+
 
 function minus(a) {return a-2;}
 
 
 function map(minus, array) {
+    var redoneArr =[];
     for (var i=0; i < array.length; i++){
         redoneArr[i]= minus(array[i]);
     }
