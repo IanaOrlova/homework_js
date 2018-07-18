@@ -10,25 +10,39 @@
 
 "use strict";
 
-do {
-    var first =  +prompt ("Введите первое число больше единици  ");
-} while (first <2);
 
-var last = ( +prompt( "Введите  максимальное число " ));
+do{
+    var first =  prompt ("Введите первое число больше единици  ");
+}
+while( first <= 1 && first !== null || isNaN(first));
+
+do{
+    var last = ( prompt( "Введите  второе  число больше первого" ));
+}
+while(  last < first && last !== null || isNaN(last));
 
 
-function ShowSimpleNumber() {
-    var a = first;
-    var b = 2;
 
- if (first == 2){alert(a);}
 
-while (a<=last)
 
-{if (a%2!==0) {alert(a); b+=a;} a++}}
 
-ShowSimpleNumber();
 
-console.log(first);
+
+
+for (var i=first; i<=last; i++){
+
+    // console.log(i+' i');
+
+    for(var j=2; j<=i; j++){
+
+        // console.log(j+' j');
+
+        if (i%j == 0) break;
+
+    }
+
+    if(j == i)  alert("Простое число " + i);
+
+}
 
 

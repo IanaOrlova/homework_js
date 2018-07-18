@@ -14,12 +14,16 @@ var MaxNum = 100;
 function guessNumber(){
 
     do {
-        var num = +prompt ("Угадайте число");
-    } while (num <= MaxNum && num != 0);
+        var num = +prompt ("Угадайте число"); console.log(num);
 
-     if(num >= MaxNum){alert("Угадали");}
+    } while ( num <= MaxNum && num !== 0 || isNaN(num));
+
+        if(num >= MaxNum){alert("Угадали");
+        }
+
 }
 guessNumber();
+
 
 
 
