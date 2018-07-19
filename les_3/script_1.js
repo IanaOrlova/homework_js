@@ -12,14 +12,14 @@
 
 
 do{
-    var first =  prompt ("Введите первое число больше единици  ");
+    var first =  +prompt ("Введите первое число больше единици  ");
 }
-while( first <= 1 && first !== null || isNaN(first));
+while( first <= 1 && first !== 0 || isNaN(first));
 
 do{
-    var last = ( prompt( "Введите  второе  число больше первого" ));
+    var last = ( +prompt( "Введите  второе  число больше первого" ));
 }
-while(  last < first && last !== null || isNaN(last));
+while(  last < first && last !== 0 || isNaN(last));
 
 
 
