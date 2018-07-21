@@ -34,9 +34,7 @@ for (var i = 0; i < getTextLowerCaseArray.length; i++) {
     }
 }
 
-for ( keys in getTextLowerCaseArray){
+console.log(getTextLowerCaseArray);
 
-    console.log(keys + ' : ' + getTextLowerCaseArray[keys]);
-}
 
 
