@@ -19,29 +19,28 @@ do { var quantity = +prompt("Введите количество чисел в �
 }
 while (isNaN(max)) ;
 
-var arrTrueFalse = [];
-//   заполняем массив случайными числами  //
+
+  // заполняем массив случайными числами  //
 
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-getRandomNumber(min, max);
 
 
-var result = [];
 function generateRandomArray(min, max, quantity) {
 
+    var result = [];
 
     for (var i = 0; i < quantity; i++) {
         result[i] = getRandomNumber(min, max);
     }
 
-    return console.log(result);
+    return result;
 
 }
 
-generateRandomArray(min, max, quantity);
+
 
 // функция для определения положительного или отрицательного числа //
 
@@ -53,25 +52,31 @@ function isPositive(x) {
     return false;
 }
 
-isPositive(result);
 
 
 // заполняем массив с true или false   //
 
 
-function getNewArray(fn, ar){
+function filter(fn, ar){
+
+    var arrTrueFalse = [];
 
     for (var i =0; i < ar.length; i++)
     {
-        arrTrueFalse[i] = fn(ar[i]);
+        if (fn(ar[i]))
+            arrTrueFalse.push(ar[i]);
     }
-    return console.log( arrTrueFalse);
+    return  arrTrueFalse;
 
 }
-getNewArray(isPositive, result);
 
-alert(arrTrueFalse);
+var testArray = generateRandomArray(min, max, quantity);
 
+console.log("Начальный массив  " + testArray);
+
+var filterArray = filter(isPositive, testArray);
+
+console.log("Массив обработанный фильтром  " + filterArray);
 
 
 

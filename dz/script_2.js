@@ -13,9 +13,14 @@ console.log(year);
 
 
 function min(x) {
+
     if (x%4 === 0 && x%100 !== 0 || x%400 === 0 ){
-        return(alert("Этот год високосный"));
-    }else   {return(alert("Этот год невисокосный "))}
+
+        return console.log("Этот год високосный");
+
+    }else{ return console.log("Этот год невисокосный ")
+
+    }
 }
 
 min(year);
