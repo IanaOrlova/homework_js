@@ -40,6 +40,10 @@ function generateRandomArray(min, max, quantity) {
 
 }
 
+var testArray = generateRandomArray(min, max, quantity);
+
+console.log("Начальный массив  " + testArray);
+
 
 
 // функция для определения положительного или отрицательного числа //
@@ -70,9 +74,6 @@ function filter(fn, ar){
 
 }
 
-var testArray = generateRandomArray(min, max, quantity);
-
-console.log("Начальный массив  " + testArray);
 
 var filterArray = filter(isPositive, testArray);
 
