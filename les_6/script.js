@@ -35,7 +35,7 @@ function edit() {
 
 function save() {
     area.style.display = 'none';
-    div_text.innerHTML =  div_text.innerHTML + area.value;
+    div_text.innerHTML =  area.value;
     div_text.style.display = 'block';
 }
 
