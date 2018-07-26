@@ -14,15 +14,18 @@
 
 
 document.onkeydown = function(e) {
+
     if (e.keyCode === 27) {
         cancel();
     }
 
     if ( e.ctrlKey && e.keyCode === 69 )  {
+        e.preventDefault();
         edit();
     }
 
     if (e.ctrlKey && e.keyCode === 83 ) {
+        e.preventDefault();
         save();
     }
 };
