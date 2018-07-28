@@ -1,0 +1,186 @@
+*{
+    font-family: Lato;
+    margin: 0 auto;
+}
+
+img{
+    display: block;
+    margin: 0;
+}
+
+
+.background{
+    background: url("img/Layer_1.png") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+.background_2{
+    background: url("img/Layer_2.png") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+
+}
+.wrapper{
+    margin: 0 auto;
+    max-width: 600px;
+    box-shadow:  0 23px 57px 0 rgba(0, 0, 0, 0.4);
+}
+
+.tabs{
+    background: #2b3040;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tab{
+    max-width: 147px;
+    padding-left: 34px;
+    margin: 0;
+    color:  #b7bacd;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+}
+
+.tab.active .tab_text{
+    color: #fbfbfb ;
+    border-bottom: 2px solid #fbfbfb;
+}
+
+.tab_text{
+    padding-top: 32px;
+}
+
+.tab_text p{
+    padding: 0 15px 32px;
+}
+
+
+.tab:last-child{
+    padding-right: 34px;
+}
+.tab_item_content{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 56px;
+    padding-bottom: 66px;
+}
+
+[class*= tab_item]{
+    background: #212534;
+}
+
+.tab_item_rating{
+    padding: 59px 20px;
+    color: #13e28d;
+}
+
+.tab_item_buy{
+    color: #fedd3f;
+    padding: 59px 20px;
+}
+
+.left{
+    max-width: 48%;
+    margin: 0;
+}
+
+.game_img{
+    position:relative ;
+}
+
+.game_img_gradient{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(124deg, transparent 50%,rgba(255,255,255, 0.1) 10%);
+}
+
+.rating{
+    text-align: center;
+    padding-top: 22px;
+}
+
+.rating i{
+    color: #4b536b;;
+    font-size: 19px;
+}
+
+.rating i:active{
+    color: #ffdd3f;
+}
+
+.right{
+    max-width: 51%;
+    text-align: left;
+    color:  #ffffff;
+    margin: 0;
+}
+
+.game_name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy {
+    padding-top: 66px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h2{
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-top: 13px;
+}
+
+h3{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-top: 13px;
+}
+
+.right p {
+    color:  #b7bacd;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    padding-top: 43px;
+}
+
+.right_text,
+.buy_text {
+    margin: 0;
+}
+
+.buy_text p{
+    color:  #fedd3f;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 0;
+}
+
+.buy_text p:last-child{
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 20px;
+    color:  #ffffff;
+    padding-top: 6px;
+}
+
+input{
+    padding: 21px 32px;
+    border-radius: 2px;
+    background-color:  #13e28d;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+}
