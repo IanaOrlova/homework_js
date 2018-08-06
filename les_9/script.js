@@ -6,5 +6,5 @@ $(document).ready(function(){
             prevArrow:'<img  class="prev" src="img/Layer_left.png">',
             nextArrow:'<img class="next" src="img/Layer_right.png">',
             variableWidth: true,
-        });
+    });
 });

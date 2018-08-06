@@ -53,16 +53,20 @@ h4{
     font-weight: 600;
 
 }
+.slick{
+    position: relative;
+    margin-left: 105px;
+}
 
 .container{
     position: relative;
-    max-width: 1784px ;
+    width:100% ;
     float:right;
     margin-top: 105px;
     margin-bottom: 125px;
 }
 
-.container:after{
+.slick:after{
     content:"";
     display:table;
     width: 100%;
@@ -71,19 +75,20 @@ h4{
 
 .next{
     position: absolute;
-    right:30px ;
+    right:0 ;
     bottom: 130px;
-
 }
+
 .prev{
     position: absolute;
     left:-100px ;
     bottom: 130px;
 }
 
-img{
-    max-width: 440px;
+.slide img{
+    width: 100%;
 }
+
 
 .hover{
     display: none;
@@ -96,8 +101,8 @@ img{
     text-transform: uppercase;
     text-align: left;
     color:  #ffffff;
-
 }
+
 .hover p:first-child{
     font-size: 28px;
     font-weight: 600;
@@ -115,6 +120,7 @@ img{
     letter-spacing: 2px;
     margin-left: 28px;
 }
+
 .slide:hover .hover{
     display: block;
 }
