@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+<div class="background">
+    <div class="container">
+    <h2>enter your city</h2>
+        <form name="weather">
+            <input type="text" name="city" placeholder="Your city" >
+            <button id="weatherBtn">Send</button>
+        </form>
+        <div class="weather">
+            <p>Date: <span id="date"></span> </p>
+            <p>Your city: <span id="city" ></span> </p>
+            <p>Temperature in your city: <span  id="temp"></span></p>
+            <p>Weather is: <span id ="weather"></span></p>
+        </div>
+        <div id="map" class="map">
+        </div>
+    </div>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="script.js"></script>
+</body>
+</html>
