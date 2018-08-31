@@ -1,0 +1,17 @@
+@import "vr";
+
+
+@mixin button{
+  background: $color-third;
+  border: none;
+  border-radius: 4px;
+  font-family: $font-family-first;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 15.01px;
+  text-align: center;
+  max-width: 148px;
+  padding: 13px 19px;
+  outline: none;
+}
