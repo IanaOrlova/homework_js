@@ -2,6 +2,13 @@
 @import "normalize";
 @import "mixin";
 
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+}
+@font-face {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 *{
   margin: 0;
 }
@@ -11,170 +18,347 @@ a{
   color: white;
 }
 
-@font-face {
-  font-family: 'Open Sans', sans-serif;
-}
-@font-face {
-  font-family: 'Source Sans Pro', sans-serif;
-}
+
+
 img{
   display: block;
-  //width: 100%;
+
 }
 
-/****************************first-section***********************************/
+ul{
+  padding: 0;
+  li{
+    display: inline-block;
+    list-style: none;
+  }
+}
+
+/*                                стилизация точек слайдера                        */
+
+
+.my-dots {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.my-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 ;
+  padding: 0;
+  cursor: pointer;
+}
+
+.my-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.my-dots li button:hover,
+.my-dots li button:focus {
+  outline: none;
+}
+
+.my-dots li button:hover:before,
+.my-dots li button:focus:before {
+  opacity: 1;
+}
+
+.my-dots li button:before {
+  font-family: 'slick';
+  font-size: 36px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '•';
+  text-align: center;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-stroke: 1px #19bd9a;;
+  text-shadow: 1px 1px 0 #19bd9a,
+  -1px -1px 0 #19bd9a, 1px -1px 0 #19bd9a, -1px 1px 0 #19bd9a, 1px 1px 0 #19bd9a;
+}
+
+.my-dots li.slick-active button:before {
+  opacity: .75;
+  color: #19bd9a;
+}
+
+/*                                           ----                                  */
+
+
+
+/*                                     first-section                              */
 
 .first-section{
   background: url("../img/IMAGE.png");
   background-size: cover;
   position: relative;
+
   &__nav{
     display: flex;
     justify-content: space-between;
-    padding: 36px 92px;
+    padding: 38px 75px 38px 95px;
+
+    &__logo{
+      padding-top: 11px;
+    }
+
     li{
-      list-style: none;
-      display: inline-block;
       font-family:$font-family-first;
       color:  #ffffff;
       font-size: 16px;
       font-weight: 400;
-      padding: 7px 20px ;
+      padding: 6px 15px ;
       border: 1px solid transparent;
+
       &:hover{
         border: 1px solid white;
         border-radius: 15px;
       }
+
     }
+
   }
+
   &__text{
-    padding-top: 208px;
-    padding-bottom: 323px;
-    max-width: 617px;
+    padding-top: 160px;
+    padding-bottom: 24%;
+    max-width: 624px;
     margin: 0 auto;
     text-align: center;
+    color:  #ffffff;
+
     h2{
       font-family:$font-family-second;
-      color:  #ffffff;
       font-size: 35px;
       font-weight: 300;
       letter-spacing: 7px;
       line-height: 70px;
+      text-transform: uppercase;
     }
+
     p{
       font-family: $font-family-first;
-      color:  #ffffff;
       font-size: 16px;
       font-weight: 400;
       line-height: 28px;
-
-
+      padding-top: 13px;
+      letter-spacing: 1px;
     }
+
   }
+
   &__link{
     position: absolute;
     bottom: 75px;
-    left: 48%;
-
-
+    left: 48.6%;
   }
+
 }
 
 
-/*******************************second-section***********************************/
+/*                                            second-section                                  */
 
 .second-section{
   padding-top: 86px;
   text-align: center;
   background: #f3f3f3;
+
   &__text{
-    max-width: 464px;
-    margin: 0 auto;
+    @include textMaxWidth;
+    padding-bottom: 75px;
+
     h4{
-      font-family: $font-family-second;
-      color:  #333b46;
-      font-size: 20px;
-      font-weight: 300;
-      letter-spacing: 4px;
-      padding-bottom: 40px;
-      text-transform: uppercase;
+      @include h4Text;
+      padding-bottom: 31px;
     }
+
     p{
-      font-family: $font-family-first;
-      color:  #81868e;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 25px;
-      padding-bottom: 87px;
+      @include pText;
     }
   }
+
   &__list{
+
     li{
-      list-style: none;
-      display: inline-block;
+      position: relative;
       font-family: $font-family-first;
       color:  #464646;
       font-size: 16px;
       font-weight: 400;
-      padding-right: 31px;
+      padding-right: 12px;
+      padding-left: 12px;
+
       a{
         color: #464646 ;
+      }
+
+      &:first-child{
+        padding-left: 0;
       }
       &:last-child{
         padding-right: 0;
       }
+
     }
+
   }
   &__container{
     max-width: 1120px;
-    margin: 0 auto;
-    padding-bottom: 92px;
-    padding-top: 60px;
+    margin: 68px auto 0;
+    padding-bottom: 95px;
+
     .img-wrapper{
-      padding: 4.5px;
+      padding: 4.8px;
     }
+
   }
+  .actv{
+
+    &:after{
+      content:"";
+      background:#19bd9a;
+      width: 39px;
+      height: 2px;
+      position: absolute;
+      left: 13px;
+      top: 29px;
+    }
+
+  }
+
 }
-/******************************third-section***********************************/
+
+/*                                         third-section                                     */
+
+
 .third-section{
-  padding-top: 66px;
+  padding-top: 75px;
   padding-bottom: 96px;
   text-align: center;
+
   &__text{
-    h4{
-      font-family: $font-family-second;
-      color:  #333b46;
-      font-size: 20px;
-      font-weight: 300;
-      letter-spacing: 4px;
-      padding-bottom: 40px;
-      text-transform: uppercase;
-    }
-    p{
-      font-family: $font-family-first;
-      color:  #81868e;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 25px;
-      padding-bottom: 87px;
-    }
+
+     @include textMaxWidth;
+      padding-bottom: 58px;
+
+      h4{
+        @include h4Text;
+        position: relative;
+        padding-bottom: 31px;
+      }
+
+      p{
+        @include pText;
+      }
+
   }
   &__slider-container{
-    max-width: 1044px;
+    max-width: 1031px;
+    padding-bottom: 71px;
     margin: 0 auto;
+
     &__slide_flex{
       display: flex;
       justify-content: space-between;
+
+      .slide__foto{
+        position: relative;
+
+        &:hover{
+
+          .slide__foto_hover{
+            display: block;
+          }
+
+        }
+
+        .slide__foto_hover{
+          display: none;
+          position: absolute;
+          background: rgba(255, 255, 255, 0.5);
+          top: 8px;
+          bottom: 8px;
+          left: 8px;
+          right: 8px;
+
+          ul{
+            margin-top:60%;
+
+              span{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: #28243b;
+                display: inline-block;
+                margin-right:13px;
+                transition: 0.5s;
+
+                i{
+                  padding-top: 6px;
+                }
+
+                &:hover {
+                  transform: scale(1.5, 1.5);
+                  z-index: 2;
+                }
+
+              }
+
+          }
+
+        }
+
+      }
+
     }
+
     .slide__text{
       text-align: right;
+      padding-right: 49px;
+
       h5{
+        position: relative;
         font-family:$font-family-first;
         color:  #464646;
         font-size: 20px;
         font-weight: 400;
         padding-top: 25px;
+
+        &:after{
+          content:"";
+          background:#19bd9a;
+          width: 42px;
+          height: 4px;
+          position: absolute;
+          right: -66px;
+          top: 50px;
+          transform: rotate(90deg);
+        }
+
       }
+
       p{
         font-family: $font-family-first;
         color:  #81868e;
@@ -182,27 +366,29 @@ img{
         font-weight: 400;
         line-height: 25px;
         max-width: 397px;
-        padding-top: 33px;
+        padding-top: 19px;
+        letter-spacing: 1px;
+
         &:nth-child(2){
           text-transform: uppercase;
           font-weight: 300;
-          letter-spacing: 1.4px;
+          letter-spacing: 1px;
           font-style: italic;
-          padding-top: 11px;
-
-
+          padding-top: 5px;
         }
+
       }
+
     }
-  }
-  .slick-dots{
-    li{
-    display: inline;
-    }
+
   }
 
 }
-/**************************************fourth-section********************************/
+
+
+/*                                           fourth-section                                 */
+
+
 .fourth-section{
   position: relative;
   background: url("../img/background.png");
@@ -210,22 +396,17 @@ img{
   text-align: center;
   font-family: $font-family-first;
   color:  #ffffff;
-  &_hover{
-    background: rgba(15, 15, 15, 0.5);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+
   p{
     font-size: 20px;
     font-weight: 400;
     line-height: 25px;
-    padding-top: 59px;
+    padding-top: 53px;
     padding-bottom: 30px;
+    letter-spacing: 1px;
   }
-  button{
+
+  a{
     color:  #ffffff;
     font-size: 16px;
     font-weight: 400;
@@ -234,166 +415,200 @@ img{
     border-radius: 8px;
     padding: 10px 28px;
     background: transparent;
-    margin-bottom: 53px;
+    margin-bottom: 57px;
+    transition: 0.5s;
+    display: inline-block;
+
+    &:hover {
+      transform: scale(1.5, 1.5);
+      z-index: 2;
+    }
 
   }
+
 }
 
-/********************************fifth-section****************************************/
+/*                                              fifth-section                                  */
+
+
 .fifth-section{
-  padding-top: 66px;
+  padding-top: 74px;
   padding-bottom: 96px;
   text-align: center;
   background: #f3f3f3;
+
   &__text{
+    @include textMaxWidth;
+
     h4{
-      font-family: $font-family-second;
-      color:  #333b46;
-      font-size: 20px;
-      font-weight: 300;
-      letter-spacing: 4px;
-      padding-bottom: 40px;
-      text-transform: uppercase;
+      @include h4Text;
+      padding-bottom: 31px;
     }
+
     p{
-      font-family: $font-family-first;
-      color:  #81868e;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 25px;
-      padding-bottom: 87px;
+      @include pText;
+      padding-bottom: 54px;
     }
+
   }
+
   &__slider-container{
     max-width: 1170px;
+    padding-bottom: 56px;
     margin: 0 auto;
     background: white;
+
     &__slide_flex{
       display: flex;
       justify-content: space-between;
-      padding: 33px 92px;
+      padding: 55px 96px;
     }
+
     .slide__text{
       text-align: left;
+
       h5{
         font-family:$font-family-first;
         color:  #19bd9a;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 400;
         padding-top: 25px;
       }
+
       p{
         font-family: $font-family-first;
         color:  #81868e;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
-        line-height: 25px;
+        line-height: 27px;
         max-width: 776px;
+        letter-spacing: 1px;
 
         &:last-child{
           text-transform: uppercase;
+          font-size: 13px;
           font-weight: 300;
           color:#464646;
         }
+
       }
+
     }
+
   }
-  .slick-dots{
-    li{
-      display: inline;
-    }
+
+  .my-dots {
+    position: absolute;
+    bottom: 55px;
   }
+
 }
 
-/*********************************six-section********************************************/
+/*                                                 six-section                                       */
+
+
+
 .sixth-section{
-  padding-top: 66px;
+  padding-top: 76px;
   text-align: center;
   background: #f3f3f3;
+
   &__text{
+    @include textMaxWidth;
+
     h4{
-      font-family: $font-family-second;
-      color:  #333b46;
-      font-size: 20px;
-      font-weight: 300;
-      letter-spacing: 4px;
-      padding-bottom: 40px;
-      text-transform: uppercase;
+      @include h4Text;
+      padding-bottom: 28px;
     }
+
     p{
-      font-family: $font-family-first;
-      color:  #81868e;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 25px;
-      padding-bottom: 87px;
+      @include pText;
+      padding-bottom: 68px;
     }
+
   }
+
   #map{
     width:100%;
     height: 439px;
   }
+
 }
-/*********************************footer*******************************************/
+
+/*                                                 footer                                           */
+
+
 footer{
   text-align: center;
-  padding: 70px 0;
+  padding: 72px 0;
+
   .logo{
-    display: inline;
+
     padding-bottom: 19px;
-    text-align: center;
-    img{
-      margin: 0 auto;
-      padding-bottom: 19px;
-    }
+    max-width: 115px;
+    margin: 0 auto;
   }
+
   p{
     font-family: $font-family-first;
     color:  #81868e;
     font-size: 14px;
     font-weight: 400;
     line-height: 25px;
-    padding-bottom: 37px;
+    padding-bottom: 32px;
+    letter-spacing: 1px;
   }
-  ul{
-    padding: 0;
-    li{
-      list-style: none;
+  li {
+    span {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #3b5998;
       display: inline-block;
-      span{
-        width: 26px;
-        height: 26px;
-        border-radius: 50%;
-        background: #3b5998;
-        display: inline-block;
-        margin-right:9px ;
-      }
-      &:nth-child(2){
-        span{
-        background: #26a6d1;
-        }
-      }
-      &:nth-child(3){
-        span{
-        background: #0e76a8;
-        }
-      }
-      &:nth-child(4){
-        span{
-        background: #618bad;
-        }
-      }
-      &:nth-child(5){
-        span{
-          background: #86c9ef;
-        }
+      margin-right: 5px;
+      transition: 0.5s;
+
+      &:hover {
+        transform: scale(1.5, 1.5);
+        z-index: 2;
       }
 
-      i{
-        color: white;
-        padding-top: 5px;
-      }
     }
+
+    &:nth-child(2) {
+
+      span {
+        background: #26a6d1;
+      }
+
+    }
+    &:nth-child(3) {
+
+      span {
+        background: #0e76a8;
+      }
+
+    }
+    &:nth-child(4) {
+
+      span {
+        background: #618bad;
+      }
+
+    }
+    &:nth-child(5) {
+
+      span {
+        background: #86c9ef;
+      }
+
+    }
+
+    i {
+      color: white;
+      padding-top: 5px;
+    }
+
   }
 
 }

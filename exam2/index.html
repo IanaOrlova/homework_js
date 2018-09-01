@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
           integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="downtime/libs/slick/slick-theme.scss">
+    <link rel="stylesheet" href="downtime/libs/slick/slick.scss">
     <link rel="stylesheet" href="css/main.min.css">
 
 
@@ -18,7 +20,7 @@
     <div class="first-section__nav">
         <div class="first-section__nav__logo">
             <div class="logo">
-                <a href="#"> <img src="img/Bouncy_white.png" /></a>
+                <a href="#"> <img src="img/Bouncy_white.png" alt="logo"/></a>
             </div>
         </div>
         <div class="first-section__nav__list">
@@ -35,7 +37,7 @@
         <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
     </div>
     <div class="first-section__link">
-        <a href="#second-section"> <img src="img/link.png" /></a>
+        <a href="#second-section"> <img src="img/link.png" alt="scroll"/></a>
     </div>
 </div>
 
@@ -46,55 +48,53 @@
     <h4>THE PORTFOLIO</h4>
     <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
     </div>
-    <section id="portfol" class="portfolio side-padding">
-
+    <section  class="second-section__portfolio side-padding">
         <div class="second-section__list">
-
             <ul class="filters">
-                <li><a href="#" data-filter=".allWorks">All Works</a> </li>
-                <li><a href="#" data-filter=".print"> Print</a></li>
-                <li><a href="#" data-filter=".branding"> Branding</a></li>
-                <li><a href="#" data-filter=".web"> Web</a></li>
-                <li><a href="#" data-filter=".html"> HTML</a></li>
+                <li class="links"><a href="#" data-filter=".allWorks" >All Works</a> </li>
+                <li class="links"><a href="#" data-filter=".print" > Print</a></li>
+                <li class="links"><a href="#" data-filter=".branding" > Branding</a></li>
+                <li class="links"><a href="#" data-filter=".web" > Web</a></li>
+                <li class="links"><a href="#" data-filter=".html" > HTML</a></li>
             </ul>
         </div>
     <div class="second-section__container">
         <div class="grid-sizer"></div>
         <div class="img-wrapper allWorks print web">
-            <img src="img/Layer 86.png" />
+            <img src="img/Layer_86.png" alt="product"/>
         </div>
         <div class="img-wrapper allWorks branding html">
-            <img src="img/Layer 87.png" />
+            <img src="img/Layer_87.png" alt="product"/>
         </div>
         <div class="img-wrapper allWorks print web">
-            <img src="img/Layer 91.png" />
+            <img src="img/Layer_91.png" alt="product"/>
         </div>
         <div class="img-wrapper allWorks branding web">
-            <img src="img/Layer 88.png" />
+            <img src="img/Layer_88.png" alt="product"/>
         </div>
         <div class="img-wrapper allWorks print html">
-            <img src="img/Layer 95.png" />
+            <img src="img/Layer_95.png" alt="product"/>
         </div>
         <div class="img-wrapper allWorks branding html">
-            <img src="img/Layer 89.png" />
+            <img src="img/Layer_89.png" alt="product"/>
         </div>
         <div class="img-wrapper allWorks print web">
-            <img src="img/Layer 90.png" />
+            <img src="img/Layer_90.png" alt="product"/>
         </div>
         <div class="img-wrapper allWorks branding html">
-            <img src="img/Layer 93.png" />
+            <img src="img/Layer_93.png" alt="product"/>
         </div>
         <div class="img-wrapper allWorks print web">
-            <img src="img/Layer 96.png" />
+            <img src="img/Layer_96.png" alt="product"/>
         </div>
         <div class="img-wrapper allWorks branding html">
-            <img src="img/Layer 97.png" />
+            <img src="img/Layer_97.png" alt="product"/>
         </div>
         <div class="img-wrapper allWorks branding web">
-            <img src="img/Layer 94.png" />
+            <img src="img/Layer_94.png" alt="product"/>
         </div>
         <div class="img-wrapper allWorks print html">
-            <img src="img/Layer 92.png" />
+            <img src="img/Layer_92.png" alt="product"/>
         </div>
     </div>
     </section>
@@ -111,7 +111,14 @@
         <div class="third-section__slider-container__slide">
             <div class="third-section__slider-container__slide_flex">
                     <div class="slide__foto">
-                        <img src="img/team.png" />
+                        <img src="img/team.png" alt="team"/>
+                        <div class="slide__foto_hover">
+                            <ul>
+                                <li><a href="#"><span><i class="fab fa-instagram"></i></span></a> </li>
+                                <li><a href="#"><span><i class="fab fa-twitter"></i></span></a> </li>
+                                <li><a href="#"><span><i class="fab fa-facebook-f"></i></span></a> </li>
+                            </ul>
+                        </div>
                     </div>
                 <div class="slide__text">
                     <h5>Abdullah Noman</h5>
@@ -127,7 +134,15 @@
         <div class="third-section__slider-container__slide">
                 <div class="third-section__slider-container__slide_flex">
                     <div class="slide__foto">
-                        <img src="img/team.png" />
+                        <img src="img/team.png" alt="team"/>
+                        <div class="slide__foto_hover">
+                            <ul>
+                                <li><a href="#"><span><i class="fab fa-instagram"></i></span></a> </li>
+                                <li><a href="#"><span><i class="fab fa-twitter"></i></span></a> </li>
+                                <li><a href="#"><span><i class="fab fa-facebook-f"></i></span></a> </li>
+
+                            </ul>
+                        </div>
                     </div>
                     <div class="slide__text">
                         <h5>Abdullah Noman</h5>
@@ -138,20 +153,24 @@
                     </div>
                 </div>
         </div>
-
         <div class="third-section__slider-container__slide">
             <div class="third-section__slider-container__slide_flex">
                 <div class="slide__foto">
-                    <img src="img/team.png" />
+                    <img src="img/team.png" alt="team"/>
+                    <div class="slide__foto_hover">
+                        <ul>
+                            <li><a href="#"><span><i class="fab fa-instagram"></i></span></a> </li>
+                            <li><a href="#"><span><i class="fab fa-twitter"></i></span></a> </li>
+                            <li><a href="#"><span><i class="fab fa-facebook-f"></i></span></a> </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="slide__text">
                     <h5>Abdullah Noman</h5>
                     <p>Creative Director, Code Cafe</p>
                     <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
                         Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение
-                        шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при
-                        простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы
-                        электронной вёрстки и редакторы HTML используют Lorem Ipsum </p>
+                        шаблона  </p>
                 </div>
             </div>
         </div>
@@ -159,9 +178,8 @@
 </div>
 
 <div class="fourth-section">
-    <!--<div class="fourth-section_hover"></div>-->
     <p>Already Loved Us? Let’s talk!</p>
-    <button><a href="#"> Contact Us</a></button>
+    <a href="#">Contact Us</a>
 </div>
 
 <div class="fifth-section">
@@ -173,7 +191,7 @@
         <div class="fifth-section__slider-container__slide">
             <div class="fifth-section__slider-container__slide_flex">
                 <div class="slide__foto">
-                    <img src="img/Testimonials.png" />
+                    <img src="img/Testimonials.png" alt="reviews"/>
                 </div>
                 <div class="slide__text">
                     <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
@@ -187,7 +205,7 @@
         <div class="fifth-section__slider-container__slide">
             <div class="fifth-section__slider-container__slide_flex">
                 <div class="slide__foto">
-                    <img src="img/Testimonials.png" />
+                    <img src="img/Testimonials.png" alt="reviews"/>
                 </div>
                 <div class="slide__text">
                     <p>无可否认，当读者在浏览一个页面的排版时，难免会被可阅读的内容所分散注意力。Lorem Ipsum的目的就是为了保持字母多多少少
@@ -202,14 +220,12 @@
         <div class="fifth-section__slider-container__slide">
             <div class="fifth-section__slider-container__slide_flex">
                 <div class="slide__foto">
-                    <img src="img/Testimonials.png" />
+                    <img src="img/Testimonials.png" alt="reviews"/>
                 </div>
                 <div class="slide__text">
                     <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
                         Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение
-                        шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при
-                        простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы
-                        электронной вёрстки и редакторы HTML используют Lorem Ipsum </p>
+                        шаблона </p>
                     <h5>PARTHO</h5>
                     <p>FOUNDER_ ARTWAYS BD</p>
                 </div>
@@ -226,7 +242,7 @@
 </div>
 <footer>
     <div class="logo">
-        <a href="#"> <img src="img/Bouncy_black.png"/></a>
+        <a href="#"> <img src="img/Bouncy_black.png" alt="logo"/></a>
     </div>
     <p>Copyright 2015. All rights Reserved</p>
     <ul>

@@ -21,7 +21,7 @@ gulp.task('browsersync', function () {
 
 gulp.task('watch', function() {
     gulp.watch('sass/*.scss', ['style']);
-    gulp.watch('src/js/script.js', ['script']);
+    gulp.watch('js/script.js', ['script']);
     bs.watch('*.html').on('change', bs.reload);
 });
 
@@ -38,7 +38,7 @@ gulp.task('style', function() {
 });
 
 gulp.task('script', function() {
-    return gulp.src('src/js/script.js')
+    return gulp.src('js/script.js')
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
         .pipe(gulp.dest('js/'))

@@ -1,10 +1,7 @@
 $(document).ready(function() {
 
-    $('[href="#"]').click(function(e) {
 
-        e.preventDefault();
-
-    });
+    //                     плавный скролл
 
 
     var $anchors = $('a[href^="#"]').not('[href="#"]');
@@ -16,8 +13,10 @@ $(document).ready(function() {
 
         $('html, body').animate({
             scrollTop: $(id).offset().top
-        }, 900);
+        }, 1200);
     });
+
+//                     слайдер
 
 
     $('.third-section__slider-container').slick({
@@ -25,7 +24,8 @@ $(document).ready(function() {
         infinite: true,
         dots: true,
         arrows: false,
-        autoplay: true
+        autoplay: true,
+        dotsClass: "my-dots",
 
     });
 
@@ -34,9 +34,14 @@ $(document).ready(function() {
         infinite: true,
         dots: true,
         arrows: false,
-        autoplay: true
+        autoplay: true,
+        dotsClass: "my-dots",
 
     });
+
+    //                  карта
+
+
 
     var mapContainer = document.getElementById('map');
 
@@ -48,8 +53,8 @@ $(document).ready(function() {
         var marker = new google.maps.Marker({
             position: {lat: 49.568583, lng: 34.585416},
             icon: {
-                url: "../img/Marker.png",
-                scaledSize: new google.maps.Size(64, 64)
+                url: "js/Marker.png",
+                scaledSize: new google.maps.Size(70, 70)
             }
         });
 
@@ -65,6 +70,10 @@ $(document).ready(function() {
 
     }
 
+    //                      изотоп
+
+
+
     var $isotopeGrid = $('.second-section__container');
 
     $isotopeGrid.isotope({
@@ -73,12 +82,34 @@ $(document).ready(function() {
     });
 
 
-    $('.portfolio .filters a').click(function () {
+    $('.second-section__portfolio .filters a').click(function () {
         var filterValue = $(this).data('filter');
 
         $isotopeGrid.isotope({
             filter: filterValue
         });
     });
+
+
+//                          кнопки изотопа
+
+    $('.links').on('click', function(e){
+        e.preventDefault();
+        var element = $(this);
+
+        if (!element.hasClass('actv')) {
+
+            element.addClass('actv').css ({
+
+
+            });
+
+            element.siblings('li').removeClass('actv').css ({
+
+
+            });
+        }
+
+    })
 
 });
