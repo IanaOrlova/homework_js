@@ -3,6 +3,7 @@ window.onload = function () {
     var APIKey = "8264281041147d9a5ec6fcb61f798642";
     var city = document.querySelector('input');
     var weatherBtn = document.getElementById("weatherBtn");
+    var mistake = document.getElementById("error");
     var currentDate = new Date();
     var day = currentDate.getDate();
     var month = currentDate.getMonth() + 1;
@@ -24,8 +25,10 @@ window.onload = function () {
         xhr.send();
 
         if (xhr.status != 200) {
-            console.log(xhr.status + '  ' + xhr.statusText);
-        } else {
+            mistake.innerHTML = ' City not found';
+            console.log(xhr.status + ' City ' + xhr.statusText);
+            }else {
+            mistake.innerHTML = ' ';
             var DATA = JSON.parse(xhr.responseText);
             var date = document.getElementById("date");
             var temp = document.getElementById("temp");
